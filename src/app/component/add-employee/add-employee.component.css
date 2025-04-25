@@ -1,0 +1,41 @@
+.container h2 {
+  margin-bottom: 20px;
+  color: #007bff;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.mb-4 h4 {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  color: #007bff;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333333;
+  font-size: 1rem;
+}
+
+.form-check-input {
+  margin-top: 0.3rem;
+  margin-left: 0;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  border-color: #28a745;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(40, 167, 69, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+  box-shadow: 0 6px 8px rgba(33, 136, 56, 0.6);
+}

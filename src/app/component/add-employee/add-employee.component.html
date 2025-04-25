@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h2>Add New Employee</h2>
+  <form #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm.value)">
+      <div class="row">
+        <div class="col-md-6 mb-3" *ngFor="let field of fields">
+          <label [for]="field.key" class="form-label">{{ field.label }}</label>
+          <input
+            [type]="field.type"
+             class="form-control"
+            [id]="field.key"
+            [name]="field.key"
+            [(ngModel)]="employee[field.key]"
+            [required]="field.required"
+          />
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  

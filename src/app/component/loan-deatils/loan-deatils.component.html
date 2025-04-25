@@ -1,0 +1,25 @@
+<Table>
+    <thead>
+        <tr>
+           <th> ID</th>
+           <th> LoanNumber</th>
+           <th> LoanAmount</th>
+           <th> LoanDate</th>
+           <th> InterestRate</th>
+           <th> TenureMonths</th>
+           <th> status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let loan of loandata">
+            <td>{{loan.id}}</td>
+                <td>{{loan.loanNumber}}</td>
+            <td>{{loan.loanAmount}}</td>
+            <td>{{loan.loanDate}}</td>
+            <td>{{loan.interestRate}}</td>
+            <td>{{loan.tenureMonths}}</td>
+            <!-- <td>{{loan.}}</td> -->
+            <td>{{loan.status}}</td>
+        </tr>
+    </tbody>
+</Table>

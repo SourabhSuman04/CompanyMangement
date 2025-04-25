@@ -1,0 +1,70 @@
+:root {
+  --primary-color: #0052cc;
+  --secondary-color: #edf2f7;
+  --accent-color: #ff6f61;
+  --text-color: #333333;
+  --background-color: #f9fafb;
+  --button-bg-color: var(--primary-color);
+  --button-hover-bg-color: #003d99;
+  --button-text-color: #ffffff;
+  --table-header-bg: var(--primary-color);
+  --table-header-text: #ffffff;
+  --table-row-bg: #ffffff;
+  --table-row-hover-bg: #f1f5f9;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--table-row-bg);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  color: var(--table-header-text);
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
