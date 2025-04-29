@@ -37,10 +37,13 @@ export class UserLoginComponent {
     // }
     this.authService.Signin(data).subscribe((res: any) => {
      console.log(res)
-      if (res.isSuccess){
+    
+     if (res.isSuccess){
+
         localStorage.setItem('username',res.data.username);
+        localStorage.setItem('token',res.data.token)
         alert(res.message);
-        this.router.navigate(['/home']);
+        this.router.navigate(['Master']);
       }
       else
         alert(res.message);

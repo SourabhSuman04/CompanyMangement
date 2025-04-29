@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>SalaryID</th>
+            <th>EmpID</th>
+            <th>BasicSalary</th>
+            <th>Bonus</th>
+            <th>PayDate</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of salarydata">
+            <Td>{{data.salaryID}}</Td>
+            <Td>{{data.empID}}</Td>
+            <Td>{{data.basicSalary}}</Td>
+            <Td>{{data.bonus}}</Td>
+            <Td>{{data.payDate}}</Td>
+            <td><div>
+                <button routerLink="/Master/addsalary">Add</button>
+                <Button routerLink="/Master/editsalary/{{data.salaryID}}">Edit</Button>
+                <button (click)="deletesalary(data.salarydata)">Delete</button>
+            </div></td>
+        </tr>
+    </tbody>
+</table>

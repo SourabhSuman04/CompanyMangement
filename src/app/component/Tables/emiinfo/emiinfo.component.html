@@ -1,0 +1,32 @@
+    <TABLe>
+        <THead>
+            <TR>
+                <TH>ID</TH>
+                <TH>LoanNumber</TH>
+                <TH>EMI_No</TH>
+                <TH>EMI_Amount</TH>
+                <TH>Due_Date</TH>
+                <TH>penalty</TH>
+                <TH>RepaymentAmt</TH>
+                <TH>RepaymentDate</TH>
+                <th>Action</th>
+            </TR>
+        </THead>
+        <TBOdy>
+            <TR *ngFor="let data of emidata">
+                <TD>{{data.id}}</TD>
+                <TD>{{data.loanNumber}}</TD>
+                <TD>{{data.emI_No}}</TD>
+                <TD>{{data.emI_Amount}}</TD>
+                <TD>{{data.due_Date}}</TD>
+                <TD>{{data.penalty}}</TD>
+                <TD>{{data.repaymentAmt}}</TD>
+                <TD>{{data.repaymentDate}}</TD>
+                <td><div>
+                    <!-- <button>Add</button>
+                    <Button>Edit</Button> -->
+                    <button (click)="deleteEmi(data.loanNumber)">Delete</button>
+                </div></td>
+            </TR>
+        </TBOdy>
+    </TABLe>

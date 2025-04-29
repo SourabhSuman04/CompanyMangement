@@ -1,4 +1,5 @@
-<div class="login-box">
+<div class="login-box"  style="
+    background: cadetblue;">
   <h2>{{username}}</h2>
   <form [formGroup]="form">
     <!-- <div class="form"> -->
@@ -12,13 +13,13 @@
       <input type="password" name="password" required="" formControlName="Password">
       <label>Password</label>
     </div>
-    <a href="#" (click)="login()">
+    <button (click)="login()">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
       Submit
-    </a>
+    </button>
   <!-- </div> -->
   </form>
 </div>

@@ -13,7 +13,7 @@ export class LoanDetailsService {
 
   getDetails()
   {
-    return this.http.get<ApiResponse<LoanInfo>>(environment.baseurl+"Loan")
+    return this.http.get<ApiResponse<LoanInfo>>(environment.baseurl+"Loan/GetAllLoans")
   }
 
   Delete(id:number)
@@ -23,6 +23,11 @@ export class LoanDetailsService {
 
   Add(model:any)
   {
-    return this.http.post(environment.baseurl+"Loan",model)
+    return this.http.post(environment.baseurl+"Loan/AddLoan",model)
+  }
+
+  getDeatilsById(loannumber:number)
+  {
+    return this.http.get(environment.baseurl+`Loan/GetLoanById?loannumber=${loannumber}`)
   }
 }

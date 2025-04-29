@@ -11,44 +11,44 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent {
 
-  employee:any
-  res:any
-  constructor(private emp:DemoService,private router:Router)
-  {
+//   employee:any
+//   res:any
+//   constructor(private emp:DemoService,private router:Router)
+//   {
 
-  }
+//   }
 
-  ngOnInit() {
-    this.getData();
-}
-  getData()
-  {
-    this.emp.getEmployeeDetails(1).subscribe((res:any)=>{
-      this.employee=res;
-      console.log(this.employee)
-    })
-  }
+//   ngOnInit() {
+//     this.getData();
+// }
+//   getData()
+//   {
+//     this.emp.getEmployeeDetails(1).subscribe((res:any)=>{
+//       this.employee=res;
+//       console.log(this.employee)
+//     })
+//   }
 
-delete(id:number)
-{
-  console.log('id',id)
-  alert("confirm")
- this.emp.delete(id).subscribe((res:any)=>
-{
-this.res=res
-alert("res.message");
-console.log(res)
-}) 
-}
+// delete(id:number)
+// {
+//   console.log('id',id)
+//   alert("confirm")
+//  this.emp.delete(id).subscribe((res:any)=>
+// {
+// this.res=res
+// alert("res.message");
+// console.log(res)
+// }) 
+// }
 
-Add()
-{
-this.router.navigate(['/Add'])
-}
+// Add()
+// {
+// this.router.navigate(['/Add'])
+// }
 
-Edit(id:number)
-{
-  this.router.navigate(['/edit',id])
-}
+// Edit(id:number)
+// {
+//   this.router.navigate(['/edit',id])
+// }
 
 }

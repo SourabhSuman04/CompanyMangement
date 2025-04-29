@@ -1,21 +1,33 @@
 <nav class="navbar">
   <div class="container">
-    <a href="#" class="logo">MyApp</a>
+    <a href="/Master" class="logo">MyApp</a>
     <ul class="nav-links">
-      <li><a href="#" class="nav-item">Home</a></li>
-      <li><a href="#" class="nav-item">About</a></li>
-    
+      <li><a href="/Master" class="nav-item">Home</a></li>
       <li class="nav-item dropdown">
-        <a href="#" class="nav-item">Tables</a>
+        <a href="/Master" class="nav-item">Registration</a>
         <ul class="dropdown-menu">
-          <li><a href="/employee">Employee Table</a></li>
-          <li><a href="loan">Loan Table</a></li>
-          <li><a href="#">Bnaunga table</a></li>
+          <li><a href="javascript:void(0)" (click)="navigateTo('add')" >Employee Registration</a></li>
+          <li><a href="javascript:void(0)" (click)="navigateTo('addloan')">Loan Registration</a></li>
+          <li><a href="javascript:void(0)" (click)="navigateTo('addproject')">project Registration</a></li>
+          <li><a href="javascript:void(0)" (click)="navigateTo('addsalary')">salary Registration</a></li>
+          <!-- <li><a href="javascript:void(0)" (click)="navigateTo('emi')">Emi table</a></li> -->
         </ul>
       </li>
     
-      <li><a href="#" class="nav-item">Contact</a></li>
-      <li class="user-name">Hello {{name}}</li>
+      <li class="nav-item dropdown">
+        <a href="/Master" class="nav-item">Tables</a>
+        <ul class="dropdown-menu">
+          <li><a href="javascript:void(0)" (click)="navigateTo('employee')" >Employee Table</a></li>
+          <li><a href="javascript:void(0)" (click)="navigateTo('loan')">Loan Table</a></li>
+          <li><a href="javascript:void(0)" (click)="navigateTo('project')">project table</a></li>
+          <li><a href="javascript:void(0)" (click)="navigateTo('salary')">salary table</a></li>
+          <li><a href="javascript:void(0)" (click)="navigateTo('emi')">Emi table</a></li>
+        </ul>
+      </li>
+    
+      <li><a href="/Master" class="nav-item">Contact</a></li>
+      <li class="user-name">Hello {{name}}!</li>
+      <li><button class="nav-item" (click)="logout()">Logout</button></li>
     </ul>
     <div class="menu-toggle" id="menu-toggle">
       <span></span>

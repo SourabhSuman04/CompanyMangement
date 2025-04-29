@@ -1,9 +1,10 @@
 export class LoanInfo{
-ID:number;
-LoanNumber:number;
-LoanAmount:number;
-LoanDate:Date;
-InterestRate:number;
-TenureMonths:number;
+id:number;
+loanNumber:number;
+loanAmount:number;
+loanDate:Date;
+interestRate:number;
+tenureMonths:number;
+roi:number
 status:boolean
 }

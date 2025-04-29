@@ -1,0 +1,51 @@
+
+<div class="container mt-5">
+    <div class="card shadow p-4">
+      <h2 class="mb-4">Loan Details Form</h2>
+      <form [formGroup]="loanForm" (ngSubmit)="onSubmit()">
+  
+        <div class="mb-3">
+          <label for="id" class="form-label">ID</label>
+          <input type="number" id="id" formControlName="id" class="form-control" placeholder="Enter ID">
+        </div>
+  
+        <div class="mb-3">
+          <label for="loanNumber" class="form-label">Loan Number</label>
+          <input type="number" id="loanNumber" formControlName="loanNumber" class="form-control" placeholder="Enter Loan Number">
+        </div>
+  
+        <div class="mb-3">
+          <label for="loanAmount" class="form-label">Loan Amount</label>
+          <input type="number" id="loanAmount" formControlName="loanAmount" class="form-control" placeholder="Enter Loan Amount">
+        </div>
+<!--   
+        <div class="mb-3">
+          <label for="loanDate" class="form-label">Loan Date</label>
+          <input type="date" id="loanDate" formControlName="loanDate" class="form-control">
+        </div> -->
+  
+        <!-- <div class="mb-3">
+          <label for="interestRate" class="form-label">Interest Rate (%)</label>
+          <input type="number" id="interestRate" formControlName="interestRate" class="form-control" placeholder="Enter Interest Rate">
+        </div> -->
+  
+        <div class="mb-3">
+          <label for="tenureMonths" class="form-label">Tenure (Months)</label>
+          <input type="number" id="tenureMonths" formControlName="tenureMonths" class="form-control" placeholder="Enter Tenure in Months">
+        </div>
+        <div class="mb-3">
+          <label for="roi" class="form-label">ROI (%)</label>
+          <input type="number" id="" formControlName="roi" class="form-control" placeholder="Enter ROI">
+        </div>
+        <div class="form-check mb-4">
+          <input type="checkbox" id="status" formControlName="status" class="form-check-input">
+          <label for="status" class="form-check-label">Active Status</label>
+        </div>
+  
+        <button type="submit" class="btn btn-primary w-100" >
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+  

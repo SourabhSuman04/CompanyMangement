@@ -1,0 +1,69 @@
+<table border="0" cellpadding="10" cellspacing="0" style="margin-top: 15px;">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Full Name</th>
+      <th>Email</th>
+      <th>Phone No</th>
+      <th>Address</th>
+      <th>Pincode</th>
+      <th>Dept ID</th>
+      <th>Desig ID</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Gender</th>
+      <th>Qualification</th>
+      <th>Citizen</th>
+      <th>PAN No</th>
+      <th>Experience</th>
+      <th>Hire Date</th>
+      <th>DOB</th>
+      <th>Language</th>
+      <th>Skills</th>
+      <th>Qualification Marks</th>
+      <th>Nominee</th>
+      <th>Is Active</th>
+      <th>Marital Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employee">
+      <td>{{employee.id}}</td>
+      <td>{{employee.fullName}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.phoneNo}}</td>
+      <td>{{employee.address}}</td>
+      <td>{{employee.pincode}}</td>
+      <td>{{employee.deptID}}</td>
+      <td>{{employee.desigID}}</td>
+      <td>{{employee.city}}</td>
+      <td>{{employee.state}}</td>
+      <td>{{employee.gender}}</td>
+      <td>{{employee.qualification}}</td>
+      <td>{{employee.citizen}}</td>
+      <td>{{employee.panNO}}</td>
+      <td>{{employee.exp}}</td>
+      <td>{{employee.hireDate}}</td>
+      <td>{{employee.dob}}</td>
+      <td>{{employee.language}}</td>
+      <td>{{employee.skills}}</td>
+      <td>{{employee.qualificationMarks}}</td>
+      <td>{{employee.nominee}}</td>
+      <td>{{employee.isActive}}</td>
+      <td>{{employee.marTialstatus}}</td>
+      <td>
+        <button class="btn btn-delete" (click)="delete(employee.id)">
+          <span class="mdi mdi-delete mdi-24px"></span>
+          <span class="mdi mdi-delete-empty mdi-24px"></span>
+          <span>Delete</span>
+        </button>
+        <button routerLink="/Master/edit/{{employee.id}}">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div>
+  <button (click)="Add()"> ADD</button>
+
+</div>

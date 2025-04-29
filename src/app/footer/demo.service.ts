@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { EmployeeModel } from '../EmployeeModel';
+import { EmployeeModel } from '../model/EmployeeModel';
 import { environment } from '../envernment/environment';
 
 @Injectable({
@@ -29,7 +29,6 @@ export class DemoService {
 
   edit(id:number)
   {
-    body:{ id=  id}
-    return this.http.post(environment.baseurl+`EmployeeDetails/GetEmployeeById/GetEmployeeById?id=${id}`,id)
+    return this.http.get(environment.baseurl+`EmployeeDetails/GetEmployeeById/GetEmployeeById?id=${id}`)
   }
 }

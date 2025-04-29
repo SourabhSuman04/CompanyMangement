@@ -8,18 +8,24 @@
            <th> InterestRate</th>
            <th> TenureMonths</th>
            <th> status</th>
+           <th>Action</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let loan of loandata">
             <td>{{loan.id}}</td>
-                <td>{{loan.loanNumber}}</td>
+            <td>{{loan.loanNumber}}</td>
             <td>{{loan.loanAmount}}</td>
             <td>{{loan.loanDate}}</td>
-            <td>{{loan.interestRate}}</td>
+            <td>{{loan.interest}}</td>
             <td>{{loan.tenureMonths}}</td>
-            <!-- <td>{{loan.}}</td> -->
+            <td>{{loan.roi}}</td>
             <td>{{loan.status}}</td>
+            <td><div>
+                <button routerLink="/Master/addloan">Add</button>
+                <Button routerLink="/Master/editLoan/{{loan.loanNumber}}">Edit</Button>
+                <button (click)="delete(loandata.LoanNumber)">Delete</button>
+            </div></td>
         </tr>
     </tbody>
 </Table>

@@ -4,10 +4,13 @@ import { DemoService } from './footer/demo.service';
 import {  HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from './footer/footer.component';
+import { LoaderComponent } from './component/loader/loader.component';
+import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, HttpClientModule, RouterOutlet],
+  imports: [CommonModule, HttpClientModule, RouterOutlet,LoaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -43,7 +46,22 @@ export class AppComponent {
   //     console.log(this.memberdata)
   //   })
   // }
-  
+    loading = false;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.loading = true;
+      }
+      if (
+        event instanceof NavigationEnd ||
+        event instanceof NavigationCancel ||
+        event instanceof NavigationError
+      ) {
+        this.loading = false;
+      }
+    });
+  }
 }
 
 

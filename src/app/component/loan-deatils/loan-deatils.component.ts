@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { LoanDetailsService } from '../../services/loan-details.service';
 import { CommonModule } from '@angular/common';
 import { LoanInfo } from '../../model/loanmodel';
+import { RouterModule } from '@angular/router';
+import { LoaderService } from '../../services/loader.service';
 
 @Component({
   selector: 'app-loan-deatils',
-  imports: [CommonModule],
+  imports: [CommonModule,RouterModule],
   templateUrl: './loan-deatils.component.html',
   styleUrl: './loan-deatils.component.css'
 })
@@ -13,38 +15,34 @@ export class LoanDeatilsComponent {
 
 data:any
 loandata:any
-constructor(private loan:LoanDetailsService)
+constructor(private loan:LoanDetailsService,private loader:LoaderService)
 {
 }
 
-ngOnit()
+ngOnInit() 
 {
 this.getDetails();
 }
 
 getDetails()
 {
+  this.loader.startLoader()
   this.loan.getDetails().subscribe((res:any)=>
   {
-    this.loandata=res;
+    this.loader.stopLoader();
+    this.loandata=res.data;
+    console.log(this.loandata)
   })
 }
 
-delete(id:number)
+delete(LoanNumber:number)
 {
-  this.loan.Delete(id).subscribe((res:any)=>
+  this.loan.Delete(LoanNumber).subscribe((res:any)=>
   {
     this.data=res;
   })
 }
 
-Add()
-{
-  result:{}
-  this.loan.Add(LoanInfo).subscribe((res:any)=>
-  {
-this.data=res;
-  })
-}
+
 
 }

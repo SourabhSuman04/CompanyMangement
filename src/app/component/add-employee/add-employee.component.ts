@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { EmployeeModel } from '../../EmployeeModel';
+import { EmployeeModel } from '../../model/EmployeeModel';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoService } from '../../footer/demo.service';
